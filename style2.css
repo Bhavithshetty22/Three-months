@@ -1,0 +1,215 @@
+/* General Styles */
+body {
+    font-family: 'Lora', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f1e3; /* Light blush pink */
+    color: #4d3b2f; /* Warm brown */
+    overflow-x: hidden;
+}
+
+header {
+    text-align: center;
+    padding: 40px;
+    background-color: #f7f1e3;
+    color: #4d3b2f;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
+    color: #b85c5c; /* Soft makeup red */
+    letter-spacing: 2px;
+    animation: slideInDown 2s ease-in-out;
+}
+
+/* Memory Section */
+#memory-detail {
+    padding: 50px;
+    text-align: center;
+    animation: fadeIn 2s ease;
+    background-color: #ffe4e1; /* Soft peach for warmth */
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.memory-detail-video {
+    border-radius: 15px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    opacity: 0;
+    animation: fadeInUp 2s forwards;
+    transition: transform 0.3s ease;
+}
+
+.memory-detail-video:hover {
+    transform: scale(1.05);
+}
+
+/* Note Section */
+#note-box {
+    padding: 60px;
+    background-color: #fbe8e7; 
+    animation: fadeIn 3s ease;
+    border-top: 3px solid #b85c5c; /* Makeup-inspired accent color */
+}
+
+.note-content {
+    max-width: 600px;
+    margin: 0 auto;
+    animation: pulse 4s infinite;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #ffe4e1, #fbe8e7); /* Soft gradient effect */
+    padding: 20px;
+}
+
+.note-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    color: #b85c5c;
+    animation: fadeInDown 2s ease;
+    border-bottom: 2px solid #b85c5c;
+    padding-bottom: 10px;
+}
+
+.note-content p {
+    background-color: #fff1f0; /* Soft creamy background for the text */
+    padding: 30px;
+    color: #4d3b2f;
+    border-radius: 15px;
+    font-size: 1.3em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    line-height: 1.8;
+    animation: fadeIn 3s ease-in-out;
+}
+
+/* Footer */
+footer {
+    background-color: #b85c5c; /* Makeup-inspired color */
+    text-align: center;
+    padding: 20px;
+    color: #ffe4e1;
+    font-size: 1.2em;
+    animation: fadeInUp 2s ease;
+    border-top: 1px solid #f0e6d6;
+}
+
+footer a {
+    color: #ffe4e1;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInDown {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    .memory-detail-video {
+        width: 90%;
+    }
+
+    .note-content {
+        padding: 20px;
+    }
+
+    .note-content h2 {
+        font-size: 2em;
+    }
+
+    .note-content p {
+        font-size: 1.1em;
+        padding: 20px;
+    }
+
+    footer {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    .memory-detail-video {
+        width: 95%;
+    }
+
+    .note-content h2 {
+        font-size: 1.8em;
+    }
+
+    .note-content p {
+        font-size: 1em;
+        padding: 15px;
+    }
+
+    footer {
+        font-size: 0.9em;
+    }
+}
+
+

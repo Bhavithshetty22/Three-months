@@ -1,0 +1,242 @@
+/* General Styles */
+body {
+    font-family: 'Lora', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0d1b2a; /* Deep midnight blue for night */
+    color: #d4af37; /* Gold for festive contrast */
+    overflow-x: hidden;
+}
+
+header {
+    text-align: center;
+    padding: 40px;
+    background-color: #1b263b; /* Darker shade of blue */
+    color: #d4af37; /* Gold */
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
+    color: #ffcc00; /* Festive gold */
+    letter-spacing: 2px;
+    animation: slideInDown 2s ease-in-out;
+}
+
+/* Memory Section */
+#memory-detail {
+    padding: 50px;
+    text-align: center;
+    animation: fadeIn 2s ease;
+    background-color: #112a46; /* Deep blue for night ambiance */
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.memory-detail-img {
+    border-radius: 15px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    max-width: 600px;
+    opacity: 0;
+    animation: fadeInUp 2s forwards;
+    transition: transform 0.3s ease;
+}
+
+.memory-detail-img:hover {
+    transform: scale(1.05);
+}
+
+/* Note Section */
+#note-box {
+    padding: 60px;
+    background-color: #0f3d60; /* Dark blue for a night-time feel */
+    animation: fadeIn 3s ease;
+    border-top: 3px solid #ffcc00; /* Bright gold accent */
+}
+
+.note-content {
+    max-width: 600px;
+    margin: 0 auto;
+    animation: pulse 4s infinite;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #102542, #0f3d60); /* Subtle gradient */
+    padding: 20px;
+}
+
+.note-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    color: #ffcc00; /* Festive gold */
+    animation: fadeInDown 2s ease;
+    border-bottom: 2px solid #ffcc00;
+    padding-bottom: 10px;
+}
+
+.note-content p {
+    background-color: #1c4872; /* Deep blue background */
+    padding: 30px;
+    color: #d4af37; /* Gold text for readability */
+    border-radius: 15px;
+    font-size: 1.3em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    line-height: 1.8;
+    animation: fadeIn 3s ease-in-out;
+}
+
+/* Footer */
+footer {
+    background-color: #ffcc00; /* Bright gold */
+    padding: 40px 20px;
+    color: #112a46; /* Deep blue for contrast */
+    text-align: center;
+    font-size: 1.2em;
+    animation: fadeInUp 2s ease;
+    border-top: 3px solid #112a46; /* Add a dark blue border to the top of the footer */
+    position: relative;
+}
+
+footer a {
+    color: #112a46; /* Deep blue link */
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #0d1b2a;
+}
+
+/* Ganesh Image in Footer */
+.ganesh-img-wrapper {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.ganesh-img {
+    width: 150px; /* Adjust size */
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Stronger shadow */
+    transition: transform 0.3s ease;
+    border: 3px solid #d4af37; /* Gold border around the image */
+}
+
+.ganesh-img:hover {
+    transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInDown {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    .memory-detail-img {
+        width: 90%;
+    }
+
+    .note-content {
+        padding: 20px;
+    }
+
+    .note-content h2 {
+        font-size: 2em;
+    }
+
+    .note-content p {
+        font-size: 1.1em;
+        padding: 20px;
+    }
+
+    footer {
+        font-size: 1em;
+    }
+
+    .ganesh-img {
+        width: 120px; /* Slightly smaller for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    .memory-detail-img {
+        width: 95%;
+    }
+
+    .note-content h2 {
+        font-size: 1.8em;
+    }
+
+    .note-content p {
+        font-size: 1em;
+        padding: 15px;
+    }
+
+    footer {
+        font-size: 0.9em;
+    }
+
+    .ganesh-img {
+        width: 100px; /* Even smaller for mobile screens */
+    }
+}

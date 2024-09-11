@@ -1,0 +1,233 @@
+/* Global Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    padding: 30px;
+    background-color: #f0ece3;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #5e5b52;
+    margin: 0;
+}
+
+/* Memories Section */
+#memories {
+    padding: 30px;
+    background-color: #fff;
+}
+
+.memory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjusted for smaller screens */
+    gap: 15px;
+}
+
+.memory-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.memory-item img {
+    width: 100%;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.memory-item:hover img {
+    transform: scale(1.05);
+}
+
+.memory-item p {
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 1em;
+}
+
+/* Note Section */
+#note {
+    background-color: #f0ece3;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.note-content {
+    max-width: 100%;
+    margin: 0 auto;
+    font-family: 'Georgia', serif;
+    font-size: 1.2em;
+    line-height: 1.8;
+}
+
+.note-content h2 {
+    font-size: 2em;
+    color: #5e5b52;
+}
+
+.note-content p {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #5e5b52;
+    color: #fff;
+    font-size: 1em;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Password Overlay Styling */
+.overlay {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:black;
+    z-index: 1000;
+}
+
+.password-container {
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 250px;
+}
+
+.password-container h2 {
+    margin-bottom: 15px;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2em;
+}
+
+.password-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.password-container button {
+    background-color: #5e5b52;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.password-container button:hover {
+    background-color: #4c4a44;
+}
+
+#error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media only screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    #memories {
+        padding: 20px;
+    }
+
+    .memory-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Smaller grid for mobile */
+        gap: 10px;
+    }
+
+    .memory-item p {
+        font-size: 0.9em;
+        padding: 3px 8px;
+    }
+
+    #note {
+        padding: 40px 20px;
+    }
+
+    .note-content h2 {
+        font-size: 1.8em;
+    }
+
+    .note-content p {
+        padding: 20px;
+        font-size: 1.1em;
+    }
+
+    .password-container {
+        width: 200px;
+        padding: 20px;
+    }
+
+    .password-container h2 {
+        font-size: 1.2em;
+    }
+
+    .password-container button {
+        padding: 8px 15px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    .memory-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .note-content h2 {
+        font-size: 1.6em;
+    }
+
+    .note-content p {
+        padding: 15px;
+        font-size: 1em;
+    }
+
+    .password-container {
+        width: 180px;
+        padding: 15px;
+    }
+}
